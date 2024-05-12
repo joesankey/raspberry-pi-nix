@@ -8,7 +8,7 @@
 final: prev:
 let
   # The version to stick at `pkgs.rpi-kernels.latest'
-  latest = "v6_1_63";
+  latest = "v6_6_28";
 
   # Helpers for building the `pkgs.rpi-kernels' map.
   rpi-kernel = { kernel, version, fw, wireless-fw, argsOverride ? null }:
@@ -69,7 +69,7 @@ in
   #
   # For example: `pkgs.rpi-kernels.v5_15_87.kernel'
   rpi-kernels = rpi-kernels [{
-    version = "6.1.63";
+    version = "6.6.28";
     kernel = rpi-linux-6_1-src;
     fw = rpi-firmware-src;
     wireless-fw = import ./raspberrypi-wireless-firmware.nix {
